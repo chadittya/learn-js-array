@@ -57,3 +57,46 @@ var arrBaru = ["Ines", "Firdausi", "Galih", "Arizza", "Candra"];
 
 var arrSlice = arrBaru.slice(1, 3);
 console.log(arrSlice.join(" - "));
+
+// 5. forEach
+var angka = [1, 2, 3, 4, 5, 6, 7, 8];
+// for (var i = 0; i < angka.length; i++) {
+//   console.log(angka[i]);
+// }
+
+angka.forEach(function (e) {
+  console.log(e);
+});
+
+var names = ["galih", "arizza", "candra"];
+
+names.forEach(function (e, i) {
+  console.log("Mahasiswa ke- " + (i + 1) + " adalah : " + e);
+});
+
+// 6. map
+var angka2 = angka.map(function (e) {
+  return e * 2;
+});
+
+console.log(angka2.join(" - "));
+
+// 7.sort
+var angkaSort = [5, 3, 2, 7, 4, 9, 10, 30];
+angkaSort.sort(function (a, b) {
+  return a - b;
+});
+console.log(angkaSort.join(" - "));
+
+// 8. filter
+var angkaFilter = angkaSort.filter(function (x) {
+  return x > 5;
+});
+
+console.log(angkaFilter);
+
+var angkaFind = angkaSort.find(function (x) {
+  return x > 5;
+});
+
+console.log(angkaFind);
